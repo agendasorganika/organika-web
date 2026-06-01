@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ORGANIKA | Transformá tus metas en hábitos</title>
+
+<meta name="description" content="Agendas digitales, planners, organizadores de hábitos y retos para ayudarte a transformar tus metas en hábitos.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--verde:#7A9B76;
+--verde-claro:#95B28F;
+--crema:#F8F6F1;
+--beige:#E8DFD2;
+--dorado:#C9A86A;
+--texto:#2D2D2D;
+--blanco:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--crema);
+color:var(--texto);
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,var(--verde),var(--verde-claro));
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+.logo{
+font-size:4rem;
+font-weight:700;
+letter-spacing:2px;
+}
+
+.slogan{
+font-size:1.8rem;
+margin-top:10px;
+font-weight:300;
+}
+
+.hero-text{
+max-width:800px;
+margin:25px auto;
+font-size:1.1rem;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+margin:10px;
+transition:.3s;
+}
+
+.btn-primary{
+background:white;
+color:var(--verde);
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-secondary{
+border:2px solid white;
+color:white;
+}
+
+.btn-secondary:hover{
+background:white;
+color:var(--verde);
+}
+
+section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:2.5rem;
+color:var(--verde);
+}
+
+.section-title p{
+margin-top:10px;
+}
+
+.hero-image{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.benefits{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.benefit{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.pack-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.pack{
+background:white;
+border-radius:20px;
+padding:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.pack:hover{
+transform:translateY(-8px);
+}
+
+.featured{
+border:3px solid var(--dorado);
+}
+
+.badge{
+background:var(--dorado);
+color:white;
+display:inline-block;
+padding:8px 16px;
+border-radius:50px;
+margin-bottom:15px;
+font-size:.9rem;
+}
+
+.pack h3{
+color:var(--verde);
+margin-bottom:20px;
+}
+
+.pack ul{
+list-style:none;
+}
+
+.pack li{
+padding:8px 0;
+}
+
+.price{
+font-size:2rem;
+font-weight:bold;
+color:var(--verde);
+margin:20px 0;
+}
+
+.buy-btn{
+display:block;
+text-align:center;
+background:var(--verde);
+color:white;
+padding:14px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.step{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.cta{
+background:linear-gradient(135deg,var(--verde),var(--verde-claro));
+color:white;
+text-align:center;
+padding:80px 30px;
+border-radius:25px;
+}
+
+footer{
+background:#5a7460;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+.logo{
+font-size:2.8rem;
+}
+
+.slogan{
+font-size:1.3rem;
+}
+
+.section-title h2{
+font-size:2rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1 class="logo">🌿 ORGANIKA</h1>
+
+<p class="slogan">Transformá tus metas en hábitos</p>
+
+<p class="hero-text">
+Planificadores digitales diseñados para ayudarte a organizar tu tiempo,
+crear rutinas positivas y alcanzar tus objetivos paso a paso.
+</p>
+
+<a href="#packs" class="btn btn-primary">
+Ver Packs
+</a>
+
+<a href="https://wa.me/5492804016697?text=Hola%20🌿%20Quiero%20información%20sobre%20Organika" class="btn btn-secondary">
+WhatsApp
+</a>
+
+</header>
+
+<section>
+
+<img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200" class="hero-image" alt="Organika">
+
+</section>
+
+<section>
+
+<div class="section-title">
+<h2>¿Por qué Organika?</h2>
+<p>Convertí tus objetivos en acciones diarias.</p>
+</div>
+
+<div class="benefits">
+
+<div class="benefit">
+🎯<br><strong>Más organización</strong>
+</div>
+
+<div class="benefit">
+🌱<br><strong>Mejores hábitos</strong>
+</div>
+
+<div class="benefit">
+📈<br><strong>Mayor productividad</strong>
+</div>
+
+<div class="benefit">
+✨<br><strong>Menos estrés</strong>
+</div>
+
+</div>
+
+</section>
+
+<section id="packs">
+
+<div class="section-title">
+<h2>Elegí tu Pack</h2>
+</div>
+
+<div class="pack-container">
+
+<div class="pack featured">
+
+<div class="badge">
+MÁS ELEGIDA ⭐
+</div>
+
+<h3>📔 Agenda Completa Premium</h3>
+
+<ul>
+<li>✔ Agenda anual</li>
+<li>✔ Planner mensual</li>
+<li>✔ Planner semanal</li>
+<li>✔ Organizador de hábitos</li>
+<li>✔ Seguimiento de objetivos</li>
+<li>✔ Retos motivacionales</li>
+</ul>
+
+<div class="price">$XXXX</div>
+
+<a class="buy-btn" href="https://wa.me/5492804016697?text=Me%20interesa%20Agenda%20Completa%20Premium">
+Quiero esta opción
+</a>
+
+</div>
+
+<div class="pack">
+
+<h3>🎯 Hábitos + Retos</h3>
+
+<ul>
+<li>✔ Tracker de hábitos</li>
+<li>✔ Seguimiento diario</li>
+<li>✔ Retos semanales</li>
+<li>✔ Retos mensuales</li>
+</ul>
+
+<div class="price">$XXXX</div>
+
+<a class="buy-btn" href="https://wa.me/5492804016697?text=Me%20interesa%20Habitos%20y%20Retos">
+Quiero esta opción
+</a>
+
+</div>
+
+<div class="pack">
+
+<h3>⭐ Premium + Bonus</h3>
+
+<ul>
+<li>✔ Agenda completa</li>
+<li>✔ Hábitos</li>
+<li>✔ Objetivos</li>
+<li>✔ Retos</li>
+<li>✔ Material descargable</li>
+<li>✔ Bonus exclusivos</li>
+</ul>
+
+<div class="price">$XXXX</div>
+
+<a class="buy-btn" href="https://wa.me/5492804016697?text=Me%20interesa%20Premium%20con%20Bonus">
+Quiero esta opción
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+<h2>Conocé Organika por dentro</h2>
+</div>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600">
+<img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600">
+<img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600">
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+<h2>Testimonios</h2>
+</div>
+
+<div class="testimonials">
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐<br><br>
+"Logré organizar mis días y cumplir mis objetivos."
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐<br><br>
+"El seguimiento de hábitos cambió mi rutina."
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐<br><br>
+"Simple, práctica y muy motivadora."
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+<h2>¿Cómo comprar?</h2>
+</div>
+
+<div class="steps">
+
+<div class="step">
+1️⃣ Elegí tu pack
+</div>
+
+<div class="step">
+2️⃣ Contactanos por WhatsApp
+</div>
+
+<div class="step">
+3️⃣ Realizá el pago
+</div>
+
+<div class="step">
+4️⃣ Recibí tu agenda digital
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="cta">
+
+<h2>🌿 Transformá tus metas en hábitos</h2>
+
+<p>
+No esperes el momento perfecto. Empezá hoy.
+</p>
+
+<br>
+
+<a href="https://wa.me/5492804016697?text=Hola%20🌿%20Quiero%20mi%20Organika" class="btn btn-primary">
+QUIERO MI ORGANIKA
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>ORGANIKA</h3>
+
+<p>Transformá tus metas en hábitos</p>
+
+<p>WhatsApp: +54 9 2804 01-6697</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5492804016697?text=Hola%20🌿%20Quiero%20información%20sobre%20Organika">
+💬
+</a>
+
+</body>
+</html>
